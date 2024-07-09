@@ -17,8 +17,8 @@ parser.add_argument('--model', type=str, required=False, default='ns_Transformer
 
 # data loader
 parser.add_argument('--data', type=str, required=False, default='CFEC75_high1', help='dataset type')
-parser.add_argument('--root_path', type=str, default='./data/ETT/', help='root path of the data file')
-parser.add_argument('--data_path', type=str, default='CFEC75_high1.csv', help='data file')
+parser.add_argument('--root_path', type=str, default='./data/', help='root path of the data file')
+parser.add_argument('--data_path', type=str, default='CFEC0_high.csv', help='data file')
 parser.add_argument('--features', type=str, default='MS',
                     help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
 parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
@@ -36,9 +36,9 @@ parser.add_argument('--pred_len', type=int, default=96, help='prediction sequenc
 #parser.add_argument('--pred_len', type=int, default=336, help='prediction sequence length')
 
 # model define
-parser.add_argument('--enc_in', type=int, default=4, help='encoder input size')
-parser.add_argument('--dec_in', type=int, default=4, help='decoder input size')
-parser.add_argument('--c_out', type=int, default=4, help='output size')
+parser.add_argument('--enc_in', type=int, default=8, help='encoder input size')
+parser.add_argument('--dec_in', type=int, default=8, help='decoder input size')
+parser.add_argument('--c_out', type=int, default=8, help='output size')
 parser.add_argument('--d_model', type=int, default=512, help='dimension of model')
 parser.add_argument('--n_heads', type=int, default=8, help='num of heads')
 parser.add_argument('--e_layers', type=int, default=2, help='num of encoder layers')
