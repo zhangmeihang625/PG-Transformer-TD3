@@ -2,7 +2,7 @@ from data_provider.data_loader import Dataset_ETT_hour, Dataset_ETT_minute, Data
 from torch.utils.data import DataLoader
 
 data_dict = {
-      'CFEC0': Dataset_ETT_hour,
+    'CFEC0': Dataset_ETT_hour,
     'CFEC0_corr': Dataset_ETT_hour,
     'CFEC0_high1': Dataset_ETT_hour,
     'CFEC0_low': Dataset_ETT_hour,
